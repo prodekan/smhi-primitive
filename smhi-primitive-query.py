@@ -24,9 +24,7 @@ def save_to_csv(name, content):
 
 
 def query(url):
-    response = requests.get(url)
-    response.encoding = 'ISO-8859-1'
-    return response
+    return requests.get(url)
 
 
 @click.group(invoke_without_command=True)
@@ -65,6 +63,7 @@ def forecast(lon, lat):
     '''Forecast on smhi_primitive_query'''
     click.echo('smhi_primitive_query forecast for ({},{})'.format(lon, lat))
     url = forecasts['base_url'] + forecasts['path'].format(lon=lon, lat=lat)
+    print(url)
     print(query(url).json())
 
 
