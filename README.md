@@ -31,6 +31,9 @@ For the historic data the we get is in CSV format (crazy, I know). Because the A
 is structured the way it is (it is kind of zooming in on the data from left to right [looking at the URL]) 
 we first loop over all possible paramters (values that are measured by stations) and create for a single station the csv file with historic data.
 
+### Parameters
+The list of parameters is in the file all_paramaters.csv. The translation needs to be done.
+
 ### Example:
 Get the history. The default station is 54290 which is near *Simris*.
 ```
