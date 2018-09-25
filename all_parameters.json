@@ -1,188 +1,189 @@
 {
-    "parameters":[
-	{
-	    "key": "21",
-	    "title": "Byvind",
-	    "summary": "max, 1 time / hour"
-	},
-	{
-	    "key": "11",
-	    "title": "Global Irradians (Swedish stations)",
-	    "summary": "average 1 hour, 1 time / hour"
-	},
-	{
-	    "key": "22",
-	    "title": "air temperature",
-	    "summary": "funds, once a month"
-	},
-	{
-	    "key": "26",
-	    "title": "air temperature",
-	    "summary": "mine, 2 times a day, at 06 and 18"
-	},
-	{
-	    "key": "27",
-	    "title": "air temperature",
-	    "summary": "max, 2 times a day, at 06 and 18"
-	},
-	{
-	    "key": "19",
-	    "title": "air temperature",
-	    "summary": "mine, once a day"
-	},
-	{
-	    "key": "1",
-	    "title": "air temperature",
-	    "summary": "instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "2",
-	    "title": "air temperature",
-	    "summary": "average 1 day, 1 time / day, at 00"
-	},
-	{
-	    "key": "20",
-	    "title": "air temperature",
-	    "summary": "max, once a day"
-	},
-	{
-	    "key": "9",
-	    "title": "Air pressure reduced sea level"
-	    "summary": "at sea level, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "24",
-	    "title": "Long-wave Irradians",
-	    "summary": "Long-wave radiation, average 1 hour, every hour"
-	},
-	{
-	    "key": "25",
-	    "title": "Max of Average Wind Speed",
-	    "summary": "maximum of average 10 minutes, for 3 hours, 1 time / hour"
-	},
-	{
-	    "key": "28",
-	    "title": "Molnbas",
-	    "summary": "lowest cloud layer, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "30",
-	    "title": "Molnbas",
-	    "summary": "other cloud layers, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "32",
-	    "title": "Molnbas",
-	    "summary": "third cloud layer, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "34",
-	    "title": "Molnbas",
-	    "summary": "fourth cloud layer, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "36",
-	    "title": "Molnbas",
-	    "summary": "lowest cloud base, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "37",
-	    "title": "Molnbas",
-	    "summary": "lowest cloud base, mine under 15 minutes, 1 time / hour"
-	},
-	{
-	    "key": "29",
-	    "title": "cloud amount"
-	    "summary": "lowest cloud layer, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "31",
-	    "title": "cloud amount"
-	    "summary": "other cloud layers, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "33",
-	    "title": "cloud amount"
-	    "summary": "third cloud layer, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "35",
-	    "title": "cloud amount"
-	    "summary": "fourth cloud layer, instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "17",
-	    "title": "precipitation",
-	    "summary": "2 times / day, at 06 and 18"
-	},
-	{
-	    "key": "18",
-	    "title": "precipitation",
-	    "summary": "1 time / day, at 18"
-	},
-	{
-	    "key": "15",
-	    "title": "precipitation intensity",
-	    "summary": "max during 15 min, 4 times / h"
-	},
-	{
-	    "key": "23",
-	    "title": "precipitation",
-	    "summary": "sum, once a month"
-	},
-	{
-	    "key": "14",
-	    "title": "precipitation",
-	    "summary": "sum 15 min, 4 times / hr"
-	},
-	{
-	    "key": "5",
-	    "title": "precipitation",
-	    "summary": "sum 1 day, 1 time / day, at 06"
-	},
-	{
-	    "key": "7",
-	    "title": "precipitation",
-	    "summary": "sum 1 hour, 1 time / hour"
-	},
-	{
-	    "key": "13",
-	    "title": "present weather",
-	    "summary": "instantaneous value, 1 time / hour and 8 times / day"
-	},
-	{
-	    "key": "6",
-	    "title": "relative humidity",
-	    "summary": "instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "12",
-	    "title": "Vision",
-	    "summary": "instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "8",
-	    "title": "snow depth"
-	    "summary": "instant value, 1 time / day, at 06"
-	},
-	{
-	    "key": "10",
-	    "title": "Sunshine",
-	    "summary": "sum 1 hour, 1 time / hour"
-	},
-	{
-	    "key": "16",
-	    "title": "Total cloud amount",
-	    "summary": "instantaneous value, 1 time / hour"
-	},
-	{
-	    "key": "4",
-	    "title": "wind speed",
-	    "summary": "average 10 min, 1 time / h"
-	},
-	{
-	    "key": "3",
-	    "title": "wind direction"
-	    "summary": "average 10 min, 1 time / h"
-	}
-    ]}
+    "parameters": [
+        {
+            "key": "21",
+            "title": "Byvind",
+            "summary": "max, 1 time / hour"
+        },
+        {
+            "key": "11",
+            "title": "Global Irradians (Swedish stations)",
+            "summary": "average 1 hour, 1 time / hour"
+        },
+        {
+            "key": "22",
+            "title": "air temperature",
+            "summary": "funds, once a month"
+        },
+        {
+            "key": "26",
+            "title": "air temperature",
+            "summary": "mine, 2 times a day, at 06 and 18"
+        },
+        {
+            "key": "27",
+            "title": "air temperature",
+            "summary": "max, 2 times a day, at 06 and 18"
+        },
+        {
+            "key": "19",
+            "title": "air temperature",
+            "summary": "mine, once a day"
+        },
+        {
+            "key": "1",
+            "title": "air temperature",
+            "summary": "instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "2",
+            "title": "air temperature",
+            "summary": "average 1 day, 1 time / day, at 00"
+        },
+        {
+            "key": "20",
+            "title": "air temperature",
+            "summary": "max, once a day"
+        },
+        {
+            "key": "9",
+            "title": "Air pressure reduced sea level",
+            "summary": "at sea level, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "24",
+            "title": "Long-wave Irradians",
+            "summary": "Long-wave radiation, average 1 hour, every hour"
+        },
+        {
+            "key": "25",
+            "title": "Max of Average Wind Speed",
+            "summary": "maximum of average 10 minutes, for 3 hours, 1 time / hour"
+        },
+        {
+            "key": "28",
+            "title": "Molnbas",
+            "summary": "lowest cloud layer, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "30",
+            "title": "Molnbas",
+            "summary": "other cloud layers, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "32",
+            "title": "Molnbas",
+            "summary": "third cloud layer, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "34",
+            "title": "Molnbas",
+            "summary": "fourth cloud layer, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "36",
+            "title": "Molnbas",
+            "summary": "lowest cloud base, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "37",
+            "title": "Molnbas",
+            "summary": "lowest cloud base, mine under 15 minutes, 1 time / hour"
+        },
+        {
+            "key": "29",
+            "title": "cloud amount",
+            "summary": "lowest cloud layer, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "31",
+            "title": "cloud amount",
+            "summary": "other cloud layers, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "33",
+            "title": "cloud amount",
+            "summary": "third cloud layer, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "35",
+            "title": "cloud amount",
+            "summary": "fourth cloud layer, instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "17",
+            "title": "precipitation",
+            "summary": "2 times / day, at 06 and 18"
+        },
+        {
+            "key": "18",
+            "title": "precipitation",
+            "summary": "1 time / day, at 18"
+        },
+        {
+            "key": "15",
+            "title": "precipitation intensity",
+            "summary": "max during 15 min, 4 times / h"
+        },
+        {
+            "key": "23",
+            "title": "precipitation",
+            "summary": "sum, once a month"
+        },
+        {
+            "key": "14",
+            "title": "precipitation",
+            "summary": "sum 15 min, 4 times / hr"
+        },
+        {
+            "key": "5",
+            "title": "precipitation",
+            "summary": "sum 1 day, 1 time / day, at 06"
+        },
+        {
+            "key": "7",
+            "title": "precipitation",
+            "summary": "sum 1 hour, 1 time / hour"
+        },
+        {
+            "key": "13",
+            "title": "present weather",
+            "summary": "instantaneous value, 1 time / hour and 8 times / day"
+        },
+        {
+            "key": "6",
+            "title": "relative humidity",
+            "summary": "instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "12",
+            "title": "Vision",
+            "summary": "instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "8",
+            "title": "snow depth",
+            "summary": "instant value, 1 time / day, at 06"
+        },
+        {
+            "key": "10",
+            "title": "Sunshine",
+            "summary": "sum 1 hour, 1 time / hour"
+        },
+        {
+            "key": "16",
+            "title": "Total cloud amount",
+            "summary": "instantaneous value, 1 time / hour"
+        },
+        {
+            "key": "4",
+            "title": "wind speed",
+            "summary": "average 10 min, 1 time / h"
+        },
+        {
+            "key": "3",
+            "title": "wind direction",
+            "summary": "average 10 min, 1 time / h"
+        }
+    ]
+}
