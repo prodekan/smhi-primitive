@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/prodekan/smhi-primitive.svg?branch=master)](https://travis-ci.com/prodekan/smhi-primitive)
 # smhi-primitive-query
 
 ## Basic setup
