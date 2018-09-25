@@ -11,12 +11,6 @@ Run the application:
 ```
 $ python -m smhi_primitive_query --help
 ```
-
-To run the tests:
-```
-    $ pytest
-```
-
 ## Intro
 
 This application provides 2 options:
@@ -26,11 +20,38 @@ This application provides 2 options:
 - The `forecast` data is taken for a fixed forcasting model (pmp3g). We take the provided URL from SMHI
 to query for a 10 day forecast. `'/api/category/pmp3g/version/2/geotype/point/lon/{lon}/lat/{lat}/data.json'`
 The data response is in json.
+Running the `--help` command gives u this:
+```
+> python -m smhi-primitive-query forecast --help
+Usage: smhi-primitive-query.py forecast [OPTIONS]
+
+  Forecast on smhi_primitive_query
+
+Options:
+  --lon FLOAT  Longitude
+  --lat FLOAT  Latitude
+  --help       Show this message and exit.
+
+```
 
 - For the `historic` data the we get is in `CSV` format (crazy, I know). Because the API on SMHI 
 is structured the way it is (it is kind of zooming in on the data from left to right [looking at the URL]) 
 we first loop over all possible paramters (values that are measured by stations) and create for a single station the csv file with historic data.
+Running the `--help` command gives u this:
+``` 
+> python -m smhi-primitive-query history --help 
+Usage: smhi-primitive-query.py history [OPTIONS]
 
+  History on smhi_primitive_query We took the default station id to be
+  "Skillinge" https://www.smhi.se/en/weather/sweden-weather/observations#ws=
+  wpt-a,proxy=wpt-a,tab=all,stationid=54290,type=weather I think this is the
+  nearest weather station to Simris
+
+Options:
+  --station INTEGER  Station ID for which to get the data
+  --help             Show this message and exit.
+
+```
 ### Parameters
 The list of parameters is in the file `all_paramaters.json`. 
 
@@ -85,4 +106,5 @@ python -m smhi-primitive-query history
 Get forecasts. Here we provide longitude and latitude that are *Simris*
 ```
 python -m smhi-primitive-query forecast --lon 14.31 --lat 55.53
+
 ```

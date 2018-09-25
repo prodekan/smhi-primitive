@@ -35,7 +35,7 @@ def smhi_primitive_query(version):
 
 
 @smhi_primitive_query.command()
-@click.option('--station', default='54290', help='Station ID for which to get the data')
+@click.option('--station', default=54290, help='Station ID for which to get the data')
 def history(station):
     """History on smhi_primitive_query
     We took the default station id to be "Skillinge"
@@ -57,8 +57,12 @@ def history(station):
 
 
 @smhi_primitive_query.command()
-@click.option('--lon', help='Longitude')
-@click.option('--lat', help='Latitude')
+@click.option('--lon',
+              default=14.31,
+              help='Longitude')
+@click.option('--lat',
+              default=55.53,
+              help='Latitude')
 def forecast(lon, lat):
     '''Forecast on smhi_primitive_query'''
     click.echo('smhi_primitive_query forecast for ({},{})'.format(lon, lat))
