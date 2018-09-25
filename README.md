@@ -23,16 +23,17 @@ This application provides 2 options:
 1. *forecast* data for for which it expects the longitude and latitude parameters
 2. *history* data which can be obtained without parameters
 
-The forecast data is taken for a fixed forcasting model (pmp3g). We take the provided URL from SMHI
+- The `forecast` data is taken for a fixed forcasting model (pmp3g). We take the provided URL from SMHI
 to query for a 10 day forecast. `'/api/category/pmp3g/version/2/geotype/point/lon/{lon}/lat/{lat}/data.json'`
 The data response is in json.
 
-For the historic data the we get is in CSV format (crazy, I know). Because the API on SMHI 
+- For the `historic` data the we get is in `CSV` format (crazy, I know). Because the API on SMHI 
 is structured the way it is (it is kind of zooming in on the data from left to right [looking at the URL]) 
 we first loop over all possible paramters (values that are measured by stations) and create for a single station the csv file with historic data.
 
 ### Parameters
-The list of parameters is in the file all_paramaters.csv. The translation needs to be done.
+The list of parameters is in the file `all_paramaters.json`. 
+
 
 ### Example:
 Get the history. The default station is 54290 which is near *Simris*.
