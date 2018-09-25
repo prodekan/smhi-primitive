@@ -35,45 +35,45 @@ we first loop over all possible paramters (values that are measured by stations)
 The list of parameters is in the file `all_paramaters.json`. 
 
 
-| key | title                               | summary                        |                                  |                |
-|-----|-------------------------------------|--------------------------------|----------------------------------|----------------|
-| 1   | air temperature                     | "instantaneous value           | 1 time / hour"                   |                |
-| 2   | air temperature                     | "average 1 day                 | 1 time / day                     | at 00"         |
-| 3   | wind direction                      | "average 10 min                | 1 time / h"                      |                |
-| 4   | wind speed                          | "average 10 min                | 1 time / h"                      |                |
-| 5   | precipitation                       | "sum 1 day                     | 1 time / day                     | at 06"         |
-| 6   | relative humidity                   | "instantaneous value           | 1 time / hour"                   |                |
-| 7   | precipitation                       | "sum 1 hour                    | 1 time / hour"                   |                |
-| 8   | snow depth                          | "instant value                 | 1 time / day                     | at 06"         |
-| 9   | Air pressure reduced sea level      | "at sea level                  | instantaneous value              | 1 time / hour" |
-| 10  | Sunshine                            | "sum 1 hour                    | 1 time / hour"                   |                |
-| 11  | Global Irradians (Swedish stations) | "average 1 hour                | 1 time / hour"                   |                |
-| 12  | Vision                              | "instantaneous value           | 1 time / hour"                   |                |
-| 13  | present weather                     | "instantaneous value           | 1 time / hour and 8 times / day" |                |
-| 14  | precipitation                       | "sum 15 min                    | 4 times / hr"                    |                |
-| 15  | precipitation intensity             | "max during 15 min             | 4 times / h"                     |                |
-| 16  | Total cloud amount                  | "instantaneous value           | 1 time / hour"                   |                |
-| 17  | precipitation                       | "2 times / day                 | at 06 and 18"                    |                |
-| 18  | precipitation                       | "1 time / day                  | at 18"                           |                |
-| 19  | air temperature                     | "mine                          | once a day"                      |                |
-| 20  | air temperature                     | "max                           | once a day"                      |                |
-| 21  | Byvind                              | "max                           | 1 time / hour"                   |                |
-| 22  | air temperature                     | "funds                         | once a month"                    |                |
-| 23  | precipitation                       | "sum                           | once a month"                    |                |
-| 24  | Long-wave Irradians                 | "Long-wave radiation           | average 1 hour                   | every hour"    |
-| 25  | Max of Average Wind Speed           | "maximum of average 10 minutes | for 3 hours                      | 1 time / hour" |
-| 26  | air temperature                     | "mine                          | 2 times a day                    | at 06 and 18"  |
-| 27  | air temperature                     | "max                           | 2 times a day                    | at 06 and 18"  |
-| 28  | Molnbas                             | "lowest cloud layer            | instantaneous value              | 1 time / hour" |
-| 29  | cloud amount                        | "lowest cloud layer            | instantaneous value              | 1 time / hour" |
-| 30  | Molnbas                             | "other cloud layers            | instantaneous value              | 1 time / hour" |
-| 31  | cloud amount                        | "other cloud layers            | instantaneous value              | 1 time / hour" |
-| 32  | Molnbas                             | "third cloud layer             | instantaneous value              | 1 time / hour" |
-| 33  | cloud amount                        | "third cloud layer             | instantaneous value              | 1 time / hour" |
-| 34  | Molnbas                             | "fourth cloud layer            | instantaneous value              | 1 time / hour" |
-| 35  | cloud amount                        | "fourth cloud layer            | instantaneous value              | 1 time / hour" |
-| 36  | Molnbas                             | "lowest cloud base             | instantaneous value              | 1 time / hour" |
-| 37  | Molnbas                             | "lowest cloud base             | mine under 15 minutes            | 1 time / hour" |
+| key | title                               | summary                                                                        |
+|-----|-------------------------------------|--------------------------------------------------------------------------------|
+| 1   | air temperature                     | instantaneous value            1 time / hour                                   |
+| 2   | air temperature                     | average 1 day                  1 time / day                      at 00         |
+| 3   | wind direction                      | average 10 min                 1 time / h                                      |
+| 4   | wind speed                          | average 10 min                 1 time / h                                      |
+| 5   | precipitation                       | sum 1 day                      1 time / day                      at 06         |
+| 6   | relative humidity                   | instantaneous value            1 time / hour                                   |
+| 7   | precipitation                       | sum 1 hour                     1 time / hour                                   |
+| 8   | snow depth                          | instant value                  1 time / day                      at 06         |
+| 9   | Air pressure reduced sea level      | at sea level                   instantaneous value               1 time / hour |
+| 10  | Sunshine                            | sum 1 hour                     1 time / hour                                   |
+| 11  | Global Irradians (Swedish stations) | average 1 hour                 1 time / hour                                   |
+| 12  | Vision                              | instantaneous value            1 time / hour                                   |
+| 13  | present weather                     | instantaneous value            1 time / hour and 8 times / day                 |
+| 14  | precipitation                       | sum 15 min                     4 times / hr                                    |
+| 15  | precipitation intensity             | max during 15 min              4 times / h                                     |
+| 16  | Total cloud amount                  | instantaneous value            1 time / hour                                   |
+| 17  | precipitation                       | 2 times / day                  at 06 and 18                                    |
+| 18  | precipitation                       | 1 time / day                   at 18                                           |
+| 19  | air temperature                     | mine                           once a day                                      |
+| 20  | air temperature                     | max                            once a day                                      |
+| 21  | Byvind                              | max                            1 time / hour                                   |
+| 22  | air temperature                     | funds                          once a month                                    |
+| 23  | precipitation                       | sum                            once a month                                    |
+| 24  | Long-wave Irradians                 | Long-wave radiation            average 1 hour                    every hour    |
+| 25  | Max of Average Wind Speed           | maximum of average 10 minutes  for 3 hours                       1 time / hour |
+| 26  | air temperature                     | mine                           2 times a day                     at 06 and 18  |
+| 27  | air temperature                     | max                            2 times a day                     at 06 and 18  |
+| 28  | Molnbas                             | lowest cloud layer             instantaneous value               1 time / hour |
+| 29  | cloud amount                        | lowest cloud layer             instantaneous value               1 time / hour |
+| 30  | Molnbas                             | other cloud layers             instantaneous value               1 time / hour |
+| 31  | cloud amount                        | other cloud layers             instantaneous value               1 time / hour |
+| 32  | Molnbas                             | third cloud layer              instantaneous value               1 time / hour |
+| 33  | cloud amount                        | third cloud layer              instantaneous value               1 time / hour |
+| 34  | Molnbas                             | fourth cloud layer             instantaneous value               1 time / hour |
+| 35  | cloud amount                        | fourth cloud layer             instantaneous value               1 time / hour |
+| 36  | Molnbas                             | lowest cloud base              instantaneous value               1 time / hour |
+| 37  | Molnbas                             | lowest cloud base              mine under 15 minutes             1 time / hour |
 
 ### Example:
 Get the history. The default station is 54290 which is near *Simris*.
