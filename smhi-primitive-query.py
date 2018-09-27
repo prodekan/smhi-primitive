@@ -4,10 +4,14 @@ available_parameters = [21, 11, 22, 26, 27, 19, 1, 2, 20, 9, 24, 25, 28, 30, 32,
                         34, 36, 37, 29, 31, 33, 35, 17, 18, 15, 23, 14, 5, 7,
                         13, 6, 12, 8, 10, 16, 4, 3]
 
+avalialbe_periods = {'hour': 'latest-hour',
+                     'day': 'latest-day',
+                     'last-months': 'latest-months',
+                     'all': 'corrected-archive'}
 observation = {
     'base_url': 'https://opendata-download-metobs.smhi.se',
     'api_version': '1.0',
-    'path': '/api/version/1.0/parameter/{param}/station/{station}/period/corrected-archive/data.csv'
+    'path': '/api/version/1.0/parameter/{param}/station/{station}/period/{period}/data.csv'
 }
 
 forecasts = {
@@ -47,12 +51,28 @@ def history(station):
     click.echo('For Station ID: {}'.format(station))
     for param in available_parameters:
         url = observation['base_url'] + \
-            observation['path'].format(param=param, station=station)
+            observation['path'].format(
+                param=param, station=station, period=avalialbe_periods['all'])
         print(url)
         content = query(url)
         save_to_csv(
-            'station_{station}-param{param}.csv'.format(station=str(station),
-                                                        param=str(param)),
+            'station_{station}-param{param}_{period}.csv'.format(station=str(station),
+                                                                 param=str(
+                                                                     param),
+                                                                 period=avalialbe_periods['all']),
+            content.text)
+
+    for param in available_parameters:
+        url = observation['base_url'] + \
+            observation['path'].format(
+                param=param, station=station, period=avalialbe_periods['last-months'])
+        print(url)
+        content = query(url)
+        save_to_csv(
+            'station_{station}-param{param}_{period}.csv'.format(station=str(station),
+                                                                 param=str(
+                                                                     param),
+                                                                 period=avalialbe_periods['last-months']),
             content.text)
 
 
