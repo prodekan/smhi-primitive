@@ -43,7 +43,10 @@ def save_to_csv(name, content):
 
 
 def query(url):
-    return requests.get(url)
+    r = requests.get(url)
+    if r.status_code > 400:
+        raise requests.HTTPError
+    return r
 
 
 @click.group(invoke_without_command=True)
@@ -71,7 +74,11 @@ def history(station, param):
             observation['path'].format(
                 param=param, station=station, period=avalialbe_periods['all'])
         print(url)
-        content = query(url)
+        try:
+            content = query(url)
+        except requests.HTTPError as httperror:
+            print('Not found for {} {}'.format(param, station))
+            return
         save_to_csv(
             'station_{station}-param{param}_{period}.csv'.format(station=str(station),
                                                                  param=str(
@@ -83,7 +90,12 @@ def history(station, param):
             observation['path'].format(
             param=param, station=station, period=avalialbe_periods['last-months'])
         print(url)
-        content = query(url)
+        try:
+            content = query(url)
+        except requests.HTTPError as httperror:
+            print('Not found for {} {}'.format(param, station))
+            return
+
         save_to_csv(
             'station_{station}-param{param}_{period}.csv'.format(station=str(station),
                                                                  param=str(
@@ -109,8 +121,10 @@ def forecast(lon, lat):
     '''Forecast on smhi_primitive_query'''
     click.echo('smhi_primitive_query forecast for ({},{})'.format(lon, lat))
     url = forecasts['base_url'] + forecasts['path'].format(lon=lon, lat=lat)
-    print(url)
-    print(query(url).json())
+    try:
+        print(query(url).json())
+    except requests.HTTPError as httperror:
+        print('Not found for {} {}'.format(lon, lat))
 
 
 @smhi_primitive_query.command()
@@ -123,8 +137,12 @@ def station(param):
 
     def save_station_file(p):
         url = stations['base_url'] + stations['path'].format(param=p)
-        save_to_json('p{param}_stations.json'.format(param=p),
-                     query(url).json())
+        try:
+            content = query(url).json()
+            save_to_json('p{param}_stations.json'.format(param=p),
+                         content)
+        except requests.HTTPError as httperror:
+            print('Not found for {} {}'.format(param, station))
 
     if param == 'all':
         for p in available_parameters:
