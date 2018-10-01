@@ -1,6 +1,27 @@
 [![Build Status](https://travis-ci.com/prodekan/smhi-primitive.svg?branch=master)](https://travis-ci.com/prodekan/smhi-primitive)
 # smhi-primitive-query
 
+### Example:
+Get the history. The default station is 54290 which is near **Simris**
+```
+python -m smhi-primitive-query history
+
+```
+
+Get the history from a station for one type of measurement. Here station 54290, temperature.
+```
+python -m smhi-primitive-query history --station 54290 --param 1
+
+```
+
+**for more info see parameter table below**
+
+Get forecasts. Here we provide longitude and latitude that are **Simris**
+```
+python -m smhi-primitive-query forecast --lon 14.31 --lat 55.53
+
+```
+
 ## Basic setup
 
 Install the requirements:
@@ -15,8 +36,8 @@ $ python -m smhi_primitive_query --help
 ## Intro
 
 This application provides 2 options:
-1. *forecast* data for for which it expects the longitude and latitude parameters
-2. *history* data which can be obtained without parameters
+1. **forecast** data for for which it expects the longitude and latitude parameters
+2. **history** data which can be obtained without parameters
 
 - The `forecast` data is taken for a fixed forcasting model (pmp3g). We take the provided URL from SMHI
 to query for a 10 day forecast. `'/api/category/pmp3g/version/2/geotype/point/lon/{lon}/lat/{lat}/data.json'`
@@ -97,15 +118,3 @@ The list of parameters is in the file `all_paramaters.json`.
 | 36  | Molnbas                             | lowest cloud base              instantaneous value               1 time / hour |
 | 37  | Molnbas                             | lowest cloud base              mine under 15 minutes             1 time / hour |
 
-### Example:
-Get the history. The default station is 54290 which is near *Simris*.
-```
-python -m smhi-primitive-query history
-
-```
-
-Get forecasts. Here we provide longitude and latitude that are *Simris*
-```
-python -m smhi-primitive-query forecast --lon 14.31 --lat 55.53
-
-```
