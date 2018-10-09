@@ -1,10 +1,14 @@
 import click
+import csv
 import json
 import csv
+import itertools
 import requests
 available_parameters = [21, 11, 22, 26, 27, 19, 1, 2, 20, 9, 24, 25, 28, 30, 32,
                         34, 36, 37, 29, 31, 33, 35, 17, 18, 15, 23, 14, 5, 7,
                         13, 6, 12, 8, 10, 16, 4, 3]
+
+list_of_station_ids = []
 
 avalialbe_periods = {'hour': 'latest-hour',
                      'day': 'latest-day',
@@ -28,6 +32,16 @@ forecasts = {
     'api_version': '2',
     'path': '/api/category/pmp3g/version/2/geotype/point/lon/{lon}/lat/{lat}/data.json'
 }
+
+
+def load_station_ids(filename):
+    with open(filename, 'r') as fd:
+        content = csv.reader(fd)
+        for c in content:
+            list_of_station_ids.append(list(c)[0])
+
+
+load_station_ids('list_of_station_ids.csv')
 
 
 def save_to_json(name, content):
@@ -57,12 +71,11 @@ def smhi_primitive_query(version):
 
 
 @smhi_primitive_query.command()
-@click.option('--station', default=54290, help='Station ID for which to get the data')
+@click.option('--station', default='all', help='Station ID for which to get the data')
 @click.option('--param', default='all', help='The measurement we are interested in. Encoded in the parameter variable.')
 def history(station, param):
     """History on smhi_primitive_query
     We took the default station id to be "Skillinge"
-    https://www.smhi.se/en/weather/sweden-weather/observations#ws=wpt-a,proxy=wpt-a,tab=all,stationid=54290,type=weather
     I think this is the nearest weather station to Simris
     """
     click.echo(
@@ -90,6 +103,7 @@ def history(station, param):
             observation['path'].format(
             param=param, station=station, period=avalialbe_periods['last-months'])
         print(url)
+
         try:
             content = query(url)
         except requests.HTTPError as httperror:
@@ -103,9 +117,19 @@ def history(station, param):
                 period=avalialbe_periods['last-months']),
             content.text)
 
-    if param == 'all':
+    restricted_parameters = [3, 4, 11, 24]
+
+    alls = list(itertools.product(restricted_parameters, list_of_station_ids))
+
+    if param == 'all' and station == 'all':
+        for p, s in alls:
+            get_history_for_parameter_and_station(p, s)
+    elif param == 'all' and station != 'all':
         for p in available_parameters:
             get_history_for_parameter_and_station(p, station)
+    elif station == 'all' and param != 'all':
+        for s in list_of_station_ids:
+            get_history_for_parameter_and_station(param, s)
     else:
         get_history_for_parameter_and_station(param, station)
 

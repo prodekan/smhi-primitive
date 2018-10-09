@@ -2,7 +2,8 @@
 # smhi-primitive-query
 
 ### Example:
-Get the history. The default station is 54290 which is near **Simris**
+Get the history. The default value for stations is 'all' - which means it gets the history for all cca. 2000 station through the history.
+Parameters will also be 'all'. This means this is a very heavy request. Keep calm and wait. 
 ```
 python -m smhi-primitive-query history
 
